@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.*;
 
 @TestMethodOrder(MethodOrderer.DisplayName.class)
 @SerenityTest
-public class SpartanAdminCRUD {
+public class AdminCRUD_Test {
 
 //    private static RequestSpecification adminSpec ;
 
@@ -33,6 +33,7 @@ public class SpartanAdminCRUD {
 
     @AfterAll
     public static void cleanUp(){
+        RestAssured.reset();
         SerenityRest.clear();
     }
 

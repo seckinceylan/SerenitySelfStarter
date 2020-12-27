@@ -3,6 +3,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import net.serenitybdd.junit5.SerenityTest;
 import net.serenitybdd.rest.Ensure;
+import net.serenitybdd.rest.SerenityRest;
 import org.junit.jupiter.api.*;
 import serenity.utility.SpartanUtil;
 
@@ -14,7 +15,7 @@ import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.lessThan;
 
 @SerenityTest
-@Disabled
+
 public class SimpleSpartanTest {
     @BeforeAll
     public static void setUp() {
@@ -23,7 +24,8 @@ public class SimpleSpartanTest {
     }
     @AfterAll
     public static void cleanUp(){
-        reset();
+        RestAssured.reset();
+        SerenityRest.clear();
     }
     @DisplayName("Testing GET /api/hello Endpoint")
     @Test
