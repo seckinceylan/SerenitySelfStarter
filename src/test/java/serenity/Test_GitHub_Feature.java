@@ -7,6 +7,7 @@ import net.serenitybdd.junit5.SerenityTest;
 import net.serenitybdd.rest.Ensure;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Title;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -18,6 +19,7 @@ import static org.hamcrest.Matchers.is;
 
 
 @SerenityTest
+@Disabled
 public class Test_GitHub_Feature {
 
     @DisplayName("This is for GitHub Test1")
